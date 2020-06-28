@@ -20,4 +20,14 @@ export class TokenService {
   DeleteToken() {
     this.cookieService.delete('chat_token');
   }
+  GetPayload() {
+    const token = this.GetToken();
+    let payload;
+    if(token) {
+      payload = token.split('.')[1];
+      payload = JSON.parse(window.atob(payload));
+    }
+
+    return payload.data;
+  }
 }
