@@ -11,13 +11,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommentsComponent } from '../components/comments/comments.component';
 import { RouterModule } from '@angular/router';
+import { PeopleComponent } from '../components/people/people.component';
 
 
 @NgModule({
   imports: [
     CommonModule,FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule
   ],
-  declarations: [StreamsComponent, ToolbarComponent, SideComponent, PostFormComponent, PostsComponent, CommentsComponent],
+  declarations: [StreamsComponent, ToolbarComponent, SideComponent, PostFormComponent, PostsComponent, CommentsComponent, PeopleComponent],
   exports: [StreamsComponent, ToolbarComponent],
   providers: [TokenService, PostService]
 })
