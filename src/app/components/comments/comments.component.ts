@@ -13,6 +13,7 @@ export class CommentsComponent implements OnInit, AfterViewInit {
 
   commentForm: FormGroup;
   postId: any;
+  commentsArray = [];
 
   constructor(private fb: FormBuilder, private postService: PostService, private route: ActivatedRoute) { }
 
@@ -21,6 +22,8 @@ export class CommentsComponent implements OnInit, AfterViewInit {
     this.postId = this.route.snapshot.paramMap.get('id');
 
     this.init();
+
+    this.GetPost();
   }
   init() {
     this.commentForm = this.fb.group({
@@ -34,8 +37,13 @@ export class CommentsComponent implements OnInit, AfterViewInit {
 
   AddComment() {
     this.postService.addComment(this.postId, this.commentForm.value.comment).subscribe(data => {
-      console.log(data);
+      this.commentForm.reset();
     });
   }
-
+GetPost() {
+  this.postService.getPost(this.postId).subscribe(data => {
+    console.log(data);
+    this.commentsArray = data.post.comments;
+  })
+}
 }
