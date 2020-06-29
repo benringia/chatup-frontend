@@ -4,11 +4,11 @@
   #signupbtn {
     float: right;
     margin-right: 10px;
-    background-color: #64b5f6;
+    background-color: #57a8b5;
     font-weight: 500;
   }
   #title {
-    background-color: #64b5f6;
+    background-color: #57a8b5;
     color: white;
     padding: 8px;
     margin-top: 0px;
@@ -27,7 +27,7 @@
   }
   
   .indeterminate {
-    background-color: #64b5f6 !important;
+    background-color: #57a8b5 !important;
   }
   
   .input-field {

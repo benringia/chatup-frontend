@@ -1,12 +1,14 @@
 .bodyDiv {
     height: 100%;
+    background-color: #57a8b5 !important;
+    margin: 0;
 }
 
 div.bodyContainer {
     margin-top: 50px !important;
 }
 .tabs a {
-    color: #64b5f6;
+    color: #57a8b5;
     font-weight: bold;
     font-size: 18px;
 }

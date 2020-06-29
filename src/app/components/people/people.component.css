@@ -57,6 +57,7 @@
   }
   
   .following {
-    color: #64b5f6 !important;
+   background-color: rgb(21, 206, 21) !important;
+   color: #fff !important;
   }
   

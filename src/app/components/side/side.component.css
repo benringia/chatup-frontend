@@ -7,13 +7,13 @@ a {
 }
 
 .active {
-    background-color: #64b5f6 !important;
+    background-color: #57a8b5 !important;
 }
 span {
     font-size: 12px;
 }
 .material-icons {
-    color: #64b5f6 !important;
+    color: #57a8b5 !important;
 }
 
 .active .material-icons {
@@ -25,7 +25,7 @@ span {
 }
 .num {
     margin: 0 !important;
-    color: #64b5f6;
+    color: #57a8b5;
     font-weight: bold;
     font-size: 16px;
 }
