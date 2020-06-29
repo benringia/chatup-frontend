@@ -12,3 +12,20 @@ a {
 span {
     font-size: 12px;
 }
+.material-icons {
+    color: #64b5f6 !important;
+}
+
+.active .material-icons {
+    color: #fff !important;
+}
+.row span {
+    font-size: 12px;
+    font-weight: bold;
+}
+.num {
+    margin: 0 !important;
+    color: #64b5f6;
+    font-weight: bold;
+    font-size: 16px;
+}

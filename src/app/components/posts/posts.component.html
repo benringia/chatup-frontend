@@ -22,7 +22,7 @@
                     <span class="iconSpan">
                         {{post.totalLikes}}
                     </span>
-                    <i class="material-icons" (click)="OpenCommentBox(post)">chat</i>
+                    <i class="material-icons" [ngClass]="(!CheckInLikesArray(post.comments, user.username)) ? 'notLiked' : 'liked'" (click)="OpenCommentBox(post)">chat</i>
                     <span class="iconSpan">
                         {{post.comments.length}}
                     </span>

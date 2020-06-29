@@ -2,20 +2,20 @@
   <div class="col s12 m4">
     <a>
         <span>Posts</span>
-        <p>10</p>
+        <p class="num">0</p>
     </a>
     
   </div>
    <div class="col s12 m4">
     <a>
         <span>Following</span>
-        <p>10</p>
+        <p class="num">0</p>
     </a>
   </div>
   <div class="col s12 m4">
     <a>
         <span>Followers</span>
-        <p>10</p>
+        <p class="num">0</p>
     </a>
     
   </div>
@@ -23,7 +23,15 @@
 
 
 <ul class="collection with-header">
-  <li class="collection-item"><div>News Feed<a href="#!" class="secondary-content"><i class="material-icons">announcement</i></a></div></li>
+  <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+    <a [routerLink]="['/streams']">
+      <div>News Feed
+        <a href="#!" class="secondary-content">
+          <i class="material-icons">announcement</i>
+        </a>
+      </div>
+    </a>
+  </li>
   <li class="collection-item"><div>People<a href="#!" class="secondary-content"><i class="material-icons">people</i></a></div></li>
   <li class="collection-item"><div>Following<a href="#!" class="secondary-content"><i class="material-icons">person_add</i></a></div></li>
   <li class="collection-item"><div>Followers<a href="#!" class="secondary-content"><i class="material-icons">people_outline</i></a></div></li>
