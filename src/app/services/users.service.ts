@@ -29,11 +29,11 @@ export class UsersService {
     });
   }
 
-  // UnFollowUser(userFollowed): Observable<any> {
-  //   return this.http.post(`${BASEURL}/unfollow-user`, {
-  //     userFollowed
-  //   });
-  // }
+  UnFollowUser(userFollowed): Observable<any> {
+    return this.http.post(`${BASEURL}/unfollow-user`, {
+      userFollowed
+    });
+  }
 
   // MarkNotification(id, deleteValue?): Observable<any> {
   //   return this.http.post(`${BASEURL}/mark/${id}`, {
