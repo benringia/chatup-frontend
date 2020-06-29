@@ -1,3 +1,25 @@
-<p>
-  comments works!
-</p>
+<app-toolbar></app-toolbar>
+
+<div class="container" style="margin-top: 30px;">
+  <div class="row">
+      <div class="col s12 m4 l3">
+          <app-side></app-side>
+      </div>
+      <div class="col s12 m8 l9">
+        <div class="row">
+          <div class="col s12 m12 l10">
+              <div class="card postDiv">
+                  <div class="card-content">
+                      <form [formGroup]="commentForm" (ngSubmit)="AddComment()">
+                          <div class="formDiv">
+                              <textarea formControlName="comment" class="materialize-textarea"></textarea>
+                              <button class="btn postBtn">Add Comment</button>
+                          </div>
+                        </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

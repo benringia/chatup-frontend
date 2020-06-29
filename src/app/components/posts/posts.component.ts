@@ -38,7 +38,7 @@ export class PostsComponent implements OnInit {
 
   LikePost(post) {
     this.postService.addLike(post).subscribe(data => {
-      console.log(data);
+      
       this.socket.emit('refresh', {});
     }, err => console.log(err))
   }
@@ -50,6 +50,7 @@ export class PostsComponent implements OnInit {
   TimeFromNow(time) {
     return moment(time).fromNow();
   }
+
   OpenCommentBox(post) {
     this.router.navigate(['post', post._id]);
   }
