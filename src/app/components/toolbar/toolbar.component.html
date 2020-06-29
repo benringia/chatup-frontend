@@ -3,8 +3,18 @@
   <div class="nav-wrapper">
     <a (click)="GoToHome()" class="brand-logo">Chat Up</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
+      <li class="dropdown-button dropdown-trigger" data-target ="dropdown">
+        <i class="fa fa-globe fa-1x badge"></i>
+        <span class="nav-label-icon">2</span>
+        <ul id='dropdown' class='dropdown-content col s12 collection'>
+          <li class="collection-item avatar" *ngFor="let data of notifications">
+            <img src="http://placehold.it/50x50" class="circle">
+            <span>{{data.message}}</span>
+            <p class="time">{{data.created}}</p>
+          </li>
+          
+        </ul>
+      </li>
       <li><a (click)="logout()">Log Out</a></li>
     </ul>
   </div>
