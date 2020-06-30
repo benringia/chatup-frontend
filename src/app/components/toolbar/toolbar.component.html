@@ -4,14 +4,20 @@
     <a (click)="GoToHome()" class="brand-logo">Chat Up</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li class="dropdown-button dropdown-trigger" data-target ="dropdown">
-        <i class="fa fa-globe fa-1x badge"></i>
-        <span class="nav-label-icon">2</span>
+        <i class="fa fa-globe-asia fa-1x badge not"></i>
+        <span class="nav-label-icon" *ngIf="count.length > 0">{{count.length}}</span>
         <ul id='dropdown' class='dropdown-content col s12 collection'>
           <li class="collection-item avatar" *ngFor="let data of notifications">
             <img src="http://placehold.it/50x50" class="circle">
-            <span>{{data.message}}</span>
-            <p class="time">{{data.created}}</p>
+            <span [ngClass]="data.read ? 'isRead' : 'unread' ">{{data.message}}</span>
+            <p class="time">{{TimeFromNow(data.created)}}</p>
           </li>
+          <li *ngIf="notifications.length <= 0">
+            <p class="text">No Notifications</p>
+          </li>
+          <p class="secondary-content">
+            <a class="markAll btn" (click)="MarkAll()">Mark All As Read</a>
+          </p>
           
         </ul>
       </li>

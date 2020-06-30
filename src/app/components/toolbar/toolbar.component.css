@@ -122,4 +122,11 @@ nav {
   li.dropdown-button {
     margin-left: 20px !important;
   }
+  .not {
+    transition: all 0.2s linear !important;
+  }
+  .not:hover,
+  .not:focus {
+    transform: scale(1.2) !important;
+  }
   
