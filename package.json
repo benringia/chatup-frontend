@@ -24,6 +24,7 @@
     "lodash": "^4.17.10",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.22.2",
+    "ngx-auto-scroll": "^1.1.0",
     "ngx-cookie-service": "^1.0.10",
     "rxjs": "6.0.0",
     "socket.io-client": "^2.1.1",
