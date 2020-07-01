@@ -4,7 +4,7 @@ import { TokenService } from './../../services/token.service';
 import { Component, OnInit, AfterViewInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import io from 'socket.io-client';
-// import { CaretEvent, EmojiEvent } from 'ng2-emoji-picker';
+import { CaretEvent, EmojiEvent } from 'ng2-emoji-picker';
 import _ from 'lodash';
 
 @Component({
@@ -32,7 +32,7 @@ export class MessageComponent implements OnInit, AfterViewInit, OnChanges {
   public toggled = false;
   public content = ' ';
 
-  // private _lastCaretEvent: CaretEvent;
+  private _lastCaretEvent: CaretEvent;
 
   constructor(
     private tokenService: TokenService,
@@ -116,28 +116,28 @@ export class MessageComponent implements OnInit, AfterViewInit, OnChanges {
     }
   }
 
-  // HandleSelection(event: EmojiEvent) {
-  //   this.content =
-  //     this.content.slice(0, this._lastCaretEvent.caretOffset) +
-  //     event.char +
-  //     this.content.slice(this._lastCaretEvent.caretOffset);
-  //   this.eventMock = JSON.stringify(event);
-  //   this.message = this.content;
+  HandleSelection(event: EmojiEvent) {
+    this.content =
+      this.content.slice(0, this._lastCaretEvent.caretOffset) +
+      event.char +
+      this.content.slice(this._lastCaretEvent.caretOffset);
+    this.eventMock = JSON.stringify(event);
+    this.message = this.content;
 
-  //   this.toggled = !this.toggled;
-  //   this.content = '';
-  // }
+    this.toggled = !this.toggled;
+    this.content = '';
+  }
 
-  // HandleCurrentCaret(event: CaretEvent) {
-  //   this._lastCaretEvent = event;
-  //   this.eventPosMock = `{ caretOffset : ${event.caretOffset}, caretRange: Range{...}, textContent: ${
-  //     event.textContent
-  //   } }`;
-  // }
+  HandleCurrentCaret(event: CaretEvent) {
+    this._lastCaretEvent = event;
+    this.eventPosMock = `{ caretOffset : ${event.caretOffset}, caretRange: Range{...}, textContent: ${
+      event.textContent
+    } }`;
+  }
 
-  // Toggled() {
-  //   this.toggled = !this.toggled;
-  // }
+  Toggled() {
+    this.toggled = !this.toggled;
+  }
 
   IsTyping() {
     this.socket.emit('start_typing', {

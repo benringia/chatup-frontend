@@ -1,5 +1,5 @@
 nav {
-    background-color: #57a8b5;
+    background-color: #000000;
   }
   
   .brand-logo {
@@ -129,4 +129,10 @@ nav {
   .not:focus {
     transform: scale(1.2) !important;
   }
+  .not {
+    cursor: pointer;
+  }
   
+  li.dropdown-button {
+    margin-left: 20px !important;
+  }
