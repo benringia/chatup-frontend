@@ -11,8 +11,8 @@
             <div class="col s10 nameCol">
               <span>
                 {{receiver}}
-                <p class="isOnline">Online</p>
-                <!-- *ngIf="isOnline" -->
+                <p class="isOnline" *ngIf="isOnline">Online</p>
+                <p class="isOnline" *ngIf="!isOnline">Offline</p>
               </span>
             </div>
           </div>

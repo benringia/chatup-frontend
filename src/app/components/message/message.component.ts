@@ -76,7 +76,7 @@ export class MessageComponent implements OnInit, AfterViewInit, OnChanges {
         (title as HTMLElement).style.marginTop = '10px';
       } else {
         this.isOnline = false;
-        (title as HTMLElement).style.marginTop = '20px';
+        (title as HTMLElement).style.marginTop = '10px';
       }
     }
   }

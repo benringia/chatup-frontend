@@ -19,7 +19,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
     this.tabElement.style.display = 'none';
   }
 
-  // online(event) {
-  //   this.online_users = event;
-  // }
+  online(event) {
+    this.online_users = event;
+  }
 }

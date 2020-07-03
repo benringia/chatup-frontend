@@ -55,6 +55,11 @@
     color: rgb(21, 206, 21) !important;
     font-size: 15px !important;
   }
+
+  .fa-circle.off {
+    color: gray !important;
+    font-size: 15px !important;
+  }
   
   .following {
    background-color: rgb(21, 206, 21) !important;
