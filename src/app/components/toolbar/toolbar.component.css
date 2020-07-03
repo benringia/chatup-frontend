@@ -1,5 +1,5 @@
 nav {
-    background-color: #000000;
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%);
   }
   
   .brand-logo {
@@ -8,7 +8,7 @@ nav {
   }
   
   .navDiv {
-    background-color: #57a8b5;
+    background-color: #473B7B;
   }
   
   .nav-content {
@@ -76,21 +76,21 @@ nav {
   }
   
   .title {
-    color: #57a8b5;
+    color: #3584A7;
     margin: 0px !important;
     padding: 0px !important;
     font-weight: normal;
   }
   
   .isRead {
-    color: #57a8b5;
+    color: #3584A7;
     margin: 0px !important;
     padding: 0px !important;
     font-weight: normal;
   }
   
   .unread {
-    color: #57a8b5;
+    color: #3584A7;
     margin: 0px !important;
     padding: 0px !important;
     font-weight: bold;
@@ -106,7 +106,7 @@ nav {
   }
   
   .material-icons {
-    color: #57a8b5 !important;
+    color: #3584A7 !important;
     cursor: pointer;
   }
   
@@ -116,7 +116,7 @@ nav {
   
   .markAll {
     color: #ffffff;
-    background: #57a8b5 !important;
+    background: #3584A7 !important;
   }
   
   li.dropdown-button {

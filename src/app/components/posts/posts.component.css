@@ -5,12 +5,12 @@
   }
   
   .liked {
-    color: #57a8b5 !important;
+    color: #3584A7 !important;
   }
   
   .title {
     font-weight: bold;
-    color: #57a8b5;
+    color: #3584A7;
   }
   
   .time {
@@ -51,7 +51,11 @@
   
   .collection {
     border: none !important;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0, 0.2) !important;
+    border-radius: 5px;
+    padding: 0;
   }
+
   
   .collection-item {
     border: none !important;

@@ -6,3 +6,8 @@
 .btn {
     background-color: #57a8b5 !important;
 }
+body {
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    min-height: 100vh;
+    height: 100%;
+}
