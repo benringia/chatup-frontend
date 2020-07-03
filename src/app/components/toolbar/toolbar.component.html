@@ -24,8 +24,8 @@
           <i class="fa fa-bell not fa-1x badge"></i>
           <span class="nav-label-icon circle" *ngIf="msgNumber > 0">{{msgNumber}}</span>
           <ul id='dropdown1' class='dropdown-content col s12 collection'>
-            <li class="collection-item avatar" *ngFor="let chat of chatList" [routerLink]="['/chat', chat.receiverId.username]" >
-              <!-- (click)="GoToChatPage(chat.receiverId.username)" -->
+            <li class="collection-item avatar" *ngFor="let chat of chatList"  (click)="GoToChatPage(chat.receiverId.username)" >
+              <!-- -->
               <img src="http://res.cloudinary.com/ratingapp/image/upload/v{{chat.receiverId.picVersion}}/{{chat.receiverId.picId}}" class="circle">
               <span class="title">
                 {{chat.receiverId.username}}

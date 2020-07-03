@@ -112,19 +112,19 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
     this.router.navigate(['streams']);
   }
 
-  // GoToChatPage(name) {
-  //   this.router.navigate(['chat', name]);
-  //   this.msgService.MarkMessages(this.user.username, name).subscribe(data => {
-  //     this.socket.emit('refresh', {});
-  //   });
-  // }
+  GoToChatPage(name) {
+    this.router.navigate(['chat', name]);
+    this.msgService.MarkMessages(this.user.username, name).subscribe(data => {
+      this.socket.emit('refresh', {});
+    });
+  }
 
-  // MarkAllMessages() {
-  //   this.msgService.MarkAllMessages().subscribe(data => {
-  //     this.socket.emit('refresh', {});
-  //     this.msgNumber = 0;
-  //   });
-  // }
+  MarkAllMessages() {
+    this.msgService.MarkAllMessages().subscribe(data => {
+      this.socket.emit('refresh', {});
+      this.msgNumber = 0;
+    });
+  }
 
   TimeFromNow(time) {
     return moment(time).fromNow();
