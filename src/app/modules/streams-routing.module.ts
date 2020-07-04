@@ -9,6 +9,7 @@ import { FollowersComponent } from '../components/followers/followers.component'
 import { NotificationsComponent } from '../components/notifications/notifications.component';
 import { ChatComponent } from '../components/chat/chat.component';
 import { ImagesComponent } from '../components/images/images.component';
+import { ViewUserComponent } from '../components/view-user/view-user.component';
 
 
 
@@ -52,6 +53,11 @@ const routes: Routes = [
     path:'images/:name',
     component: ImagesComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: ':name',
+    component: ViewUserComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: '**',

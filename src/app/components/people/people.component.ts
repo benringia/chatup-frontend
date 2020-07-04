@@ -51,17 +51,17 @@ export class PeopleComponent implements OnInit {
     });
   }
 
-  // ViewUser(user) {
-  //   this.router.navigate([user.username]);
-  //   if (this.loggedInUser.username !== user.username) {
-  //     this.usersService.ProfileNotifications(user._id).subscribe(
-  //       data => {
-  //         this.socket.emit('refresh', {});
-  //       },
-  //       err => console.log(err)
-  //     );
-  //   }
-  // }
+  ViewUser(user) {
+    this.router.navigate([user.username]);
+    // if (this.loggedInUser.username !== user.username) {
+    //   this.usersService.ProfileNotifications(user._id).subscribe(
+    //     data => {
+    //       this.socket.emit('refresh', {});
+    //     },
+    //     err => console.log(err)
+    //   );
+    // }
+  }
 
   CheckInArray(arr, id) {
     const result = _.find(arr, ['userFollowed._id', id]);
