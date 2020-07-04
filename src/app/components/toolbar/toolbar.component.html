@@ -8,7 +8,7 @@
           <span class="nav-label-icon circle" *ngIf="count.length > 0">{{count.length}}</span>
           <ul id='dropdown' class='dropdown-content col s12 collection'>
             <li class="collection-item avatar" *ngFor="let data of notifcations">
-              <img src="http://res.cloudinary.com/ratingapp/image/upload/v{{data.senderId.picVersion}}/{{data.senderId.picId}}" class="circle">
+              <img src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{data.senderId.picVersion}}/{{data.senderId.picId}}" class="circle">
               <span [ngClass]="data.read ? 'isRead' : 'unread' ">{{data.message}}</span>
               <p class="time">{{TimeFromNow(data.created)}}</p>
             </li>
@@ -26,7 +26,7 @@
           <ul id='dropdown1' class='dropdown-content col s12 collection'>
             <li class="collection-item avatar" *ngFor="let chat of chatList"  (click)="GoToChatPage(chat.receiverId.username)" >
               <!-- -->
-              <img src="http://res.cloudinary.com/ratingapp/image/upload/v{{chat.receiverId.picVersion}}/{{chat.receiverId.picId}}" class="circle">
+              <img src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{chat.receiverId.picVersion}}/{{chat.receiverId.picId}}" class="circle">
               <span class="title">
                 {{chat.receiverId.username}}
                 <a class="secondary-content">
@@ -44,7 +44,7 @@
                 </a>
               </p>
             </li>
-            <li *ngIf="notifcations.length <= 0">
+            <li *ngIf="notifcations.length === 0">
               <p class="text">No Notification</p>
             </li>
             <p class="secondary-content">
@@ -59,7 +59,7 @@
     </div>
     <div class="nav-content">
       <div class="nav-div">
-        <img class="circle responsive-img" src="http://res.cloudinary.com/ratingapp/image/upload/v{{imageVersion}}/{{imageId}}">
+        <img class="circle responsive-img" src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{imageVersion}}/{{imageId}}">
       </div>
       <h1 class="profile-name">{{user.username}}</h1>
       <!-- <p class="user-text">This is a test</p> -->

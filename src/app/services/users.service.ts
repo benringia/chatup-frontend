@@ -54,9 +54,9 @@ export class UsersService {
     });
   }
 
-  // SetDefaultImage(imageId, imageVersion): Observable<any> {
-  //   return this.http.get(`${BASEURL}/set-default-image/${imageId}/${imageVersion}`);
-  // }
+  SetDefaultImage(imageId, imageVersion): Observable<any> {
+    return this.http.get(`${BASEURL}/set-default-image/${imageId}/${imageVersion}`);
+  }
 
   // ProfileNotifications(id): Observable<any> {
   //   return this.http.post(`${BASEURL}/user/view-profile`, { id });
