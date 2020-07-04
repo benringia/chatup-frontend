@@ -25,6 +25,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.22.2",
     "ng2-emoji-picker": "^1.4.8",
+    "ng2-file-upload": "^1.4.0",
     "ngx-auto-scroll": "^1.1.0",
     "ngx-cookie-service": "^1.0.10",
     "rxjs": "6.0.0",

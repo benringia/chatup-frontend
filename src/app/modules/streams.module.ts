@@ -22,8 +22,9 @@ import { MessageComponent } from '../components/message/message.component';
 import { MessageService } from '../services/message.service';
 import { NgxAutoScrollModule } from 'ngx-auto-scroll';
 import { EmojiPickerModule } from 'ng2-emoji-picker';
+import { ImagesComponent } from '../components/images/images.component';
 // import { ImagesComponent } from '../components/images/images.component';
-// import { FileUploadModule } from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
 // import { ViewUserComponent } from '../components/view-user/view-user.component';
 // import { ChangePasswordComponent } from '../components/change-password/change-password.component';
 // import { ScrollDirective } from '../directives/scroll.directive';
@@ -37,7 +38,7 @@ import { EmojiPickerModule } from 'ng2-emoji-picker';
     HttpClientModule,
     RouterModule,
     NgxAutoScrollModule,
-    // FileUploadModule,
+    FileUploadModule,
     EmojiPickerModule.forRoot(),
     // InfiniteScrollModule
   ],
@@ -55,6 +56,7 @@ import { EmojiPickerModule } from 'ng2-emoji-picker';
     TopStreamsComponent,
     ChatComponent,
     MessageComponent,
+    ImagesComponent,
     // ImagesComponent,
     // ViewUserComponent,
     // ChangePasswordComponent,
