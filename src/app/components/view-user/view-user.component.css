@@ -44,6 +44,9 @@
     width: 200px;
     height: auto !important;
   }
+  .tabs {
+    background-color: transparent !important;
+  }
   
   .tabs a {
     color: #64b5f6 !important;

@@ -53,14 +53,14 @@ export class PeopleComponent implements OnInit {
 
   ViewUser(user) {
     this.router.navigate([user.username]);
-    // if (this.loggedInUser.username !== user.username) {
-    //   this.usersService.ProfileNotifications(user._id).subscribe(
-    //     data => {
-    //       this.socket.emit('refresh', {});
-    //     },
-    //     err => console.log(err)
-    //   );
-    // }
+    if (this.loggedInUser.username !== user.username) {
+      this.usersService.ProfileNotifications(user._id).subscribe(
+        data => {
+          this.socket.emit('refresh', {});
+        },
+        err => console.log(err)
+      );
+    } //comment this if statement to turn off view profile notif
   }
 
   CheckInArray(arr, id) {
