@@ -26,6 +26,7 @@ import { ImagesComponent } from '../components/images/images.component';
 // import { ImagesComponent } from '../components/images/images.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ViewUserComponent } from '../components/view-user/view-user.component';
+import { ChangePasswordComponent } from '../components/change-password/change-password.component';
 // import { ViewUserComponent } from '../components/view-user/view-user.component';
 // import { ChangePasswordComponent } from '../components/change-password/change-password.component';
 // import { ScrollDirective } from '../directives/scroll.directive';
@@ -59,6 +60,7 @@ import { ViewUserComponent } from '../components/view-user/view-user.component';
     MessageComponent,
     ImagesComponent,
     ViewUserComponent,
+    ChangePasswordComponent,
     // ImagesComponent,
     // ViewUserComponent,
     // ChangePasswordComponent,
