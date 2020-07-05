@@ -19,7 +19,7 @@
               <h3 class="card-title">
                 {{user.userFollowed.username}}
               </h3>
-              <!-- <p *ngIf="user.userFollowed.city">{{user.userFollowed.city}}, {{user.userFollowed.country}}</p> -->
+              <p *ngIf="user.userFollowed.city">{{user.userFollowed.city}}, {{user.userFollowed.country}}</p>
               <button class="btn" (click)="UnFollowUser(user.userFollowed)">UnFollow</button>
             </div>
           </div>

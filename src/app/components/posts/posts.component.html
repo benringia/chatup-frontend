@@ -4,16 +4,16 @@
       <img src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{post.user.picVersion}}/{{post.user.picId}}" alt="" class="circle">
       <span class="title">{{post.username}}</span>
       <p class="time">{{TimeFromNow(post.created)}} <br>
-         <!-- Country -->
+         @{{post.user.city}}, {{post.user.country}}
       </p>
      
     </li>
     <div class="row">
         <div class="col s12 inner">
             <div class="card">
-                <!-- <div class="card-image">
-                    <img class="postImage" src="https://img.freepik.com/free-vector/abstract-futuristic-background_23-2148399335.jpg?size=626&ext=jpg">
-                </div> -->
+                <div class="card-image" *ngIf="post.imgId">
+                    <img class="postImage" src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{post.imgVersion}}/{{post.imgId}}">
+                </div>
                 <div class="card-content">
                     <p>{{post.post}}</p>
                 </div>

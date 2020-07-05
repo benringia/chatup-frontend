@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col s12">
           <span class="title">{{name}}</span>
-          <!-- <h2 class="cityName" *ngIf="user">{{user.city}}, {{user.country}}</h2> -->
+          <h2 class="cityName" *ngIf="user">{{user.city}}, {{user.country}}</h2>
         </div>
       </div>
     </div>
@@ -45,14 +45,14 @@
                   Edit
                 </span> -->
                 <p class="time">{{TimeFromNow(post.postId.created)}}
-                  <!-- <br> @{{user.city}}, {{user.country}} -->
+                  <br> @{{user.city}}, {{user.country}}
                 </p>
               </li>
               <div class="row">
                 <div class="col s12">
                   <div class="card">
                     <div class="card-image card_image" *ngIf="post.postId.imgId">
-                      <img class="postImage" src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{post.postId.picVersion}}/{{post.postId.picId}}">
+                      <img class="postImage" src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{post.postId.imgVersion}}/{{post.postId.imgId}}">
                     </div>
                     <div class="card-content">
                        <p>{{post.postId.post}}</p>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="card-action">
                   <h3 class="card-title">{{user.userFollowed.username}}</h3>
-                  <!-- <p>Country</p> -->
+                  <p *ngIf="user.follower.city">{{user.userFollowed.city}}, {{user.userFollowed.country}}</p>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="card-action">
                   <h3 class="card-title">{{user.follower.username}}</h3>
-                  <!-- <p>Country</p> -->
+                  <p *ngIf="user.follower.city">{{user.follower.city}}, {{user.follower.country}}</p>
                 </div>
               </div>
             </div>
