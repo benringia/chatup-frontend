@@ -3,10 +3,10 @@
     <li class="collection-item avatar">
       <img src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{post.user.picVersion}}/{{post.user.picId}}" alt="" class="circle">
       <span class="title">{{post.username}}</span>
+      <span data-target="modal" class="title secondary-content modal-trigger" *ngIf="post.username === user.username" (click)="OpenEditModal(post)"><i class="fas fa-edit"></i></span>
       <p class="time">{{TimeFromNow(post.created)}} <br>
          @{{post.user.city}}, {{post.user.country}}
       </p>
-     
     </li>
     <div class="row">
         <div class="col s12 inner">
@@ -31,6 +31,47 @@
         </div>
     </div>
   </ul>
+
+  <div class="container">
+      <div id="modal" class="modal">
+          <div class="modal-content">
+              <h4>
+                  Edit Post
+                  <button class="secondary-content deleteBtn btn">Delete </button>
+              </h4>
+              <p *ngIf="postValue">{{postValue.post}}</p>
+              <form [formGroup]="editForm" novalidate>
+                  <textarea formControlName="editedPost" class="materialize-textarea"></textarea>
+                  <div class="modal-footer">
+                    <button (click)="CloseModal()" class="button">Cancel </button>&nbsp;
+                    <button (click)="SubmitEditedPost()" class="btn">Save </button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+<!-- <div class="container">
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+            <h4>
+                Edit Post
+                <button class="secondary-content waves-effect waves-light btn red" (click)="DeletePost()">
+                    Delete Post
+                </button>
+            </h4>
+            <p *ngIf="postValue">{‌{postValue.post}}</p>
+            <form [formGroup]="EditForm" novalidate>
+                <textarea formControlName="editedPost" class="materialize-textarea"></textarea>
+                <div class="modal-footer">
+                    <button (click)="CloseModal()" class="button">Cancel</button>&nbsp;
+                    <button (click)="SubmitEditedPost()" class="btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
 
  
            

@@ -5,6 +5,8 @@ import io from 'socket.io-client';
 import _ from 'lodash';
 import { TokenService } from 'src/app/services/token.service';
 import { Router } from '@angular/router';
+import * as M from 'materialize-css';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-posts',
@@ -15,18 +17,32 @@ export class PostsComponent implements OnInit {
   socket: any;
   posts = [];
   user: any;
+  editForm: FormGroup;
+  postValue: any;
+  modalElement: any;
 
 
-  constructor(private postService: PostService, private tokenService: TokenService, private router: Router) {
+  constructor(private postService: PostService, private tokenService: TokenService, private router: Router, private fb: FormBuilder) {
     this.socket = io('http://localhost:3000');
   }
 
   ngOnInit() {
+    this.modalElement = document.querySelector('.modal');
+    M.Modal.init(this.modalElement, {});
+
     this.user = this.tokenService.GetPayload();
     this.AllPosts();
 
     this.socket.on('refreshPage', data => {
       this.AllPosts();
+    });
+
+    this.InitEditForm();
+  }
+
+  InitEditForm() {
+    this.editForm = this.fb.group({
+      editedPost: ['', Validators.required]
     });
   }
 
@@ -39,6 +55,23 @@ export class PostsComponent implements OnInit {
         this.router.navigate(['']);
       }
     });
+  }
+
+  OpenEditModal(post) {
+    this.postValue = post;
+  }
+  SubmitEditedPost() {
+    const body = {
+      id: this.postValue._id,
+      post: this.editForm.value.editedPost
+    }
+    this.postService.EditPost(body).subscribe(data => {
+      console.log(data)
+      this.socket.emit('refresh', {});
+    }, err => console.log(err))
+  }
+  CloseModal() {
+    M.Modal.getInstance(this.modalElement).close();
   }
 
   LikePost(post) {

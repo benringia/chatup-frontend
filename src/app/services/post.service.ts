@@ -11,26 +11,29 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  addPost(body): Observable<any> {
-    return this.http.post(`${BASEURL}/post/add-post`, body);
-  }
+    addPost(body): Observable<any> {
+      return this.http.post(`${BASEURL}/post/add-post`, body);
+    }
 
-  getAllPosts(): Observable<any> {
-    return this.http.get(`${BASEURL}/posts`);
-  }
+    getAllPosts(): Observable<any> {
+      return this.http.get(`${BASEURL}/posts`);
+    }
 
-  addLike(id): Observable<any> {
-    return this.http.post(`${BASEURL}/post/add-like`, id);
-  }
+    addLike(id): Observable<any> {
+      return this.http.post(`${BASEURL}/post/add-like`, id);
+    }
 
- addComment(postId, comment): Observable<any> {
-   return this.http.post(`${BASEURL}/post/add-comment`, {
-     postId,
-     comment
-   });
- }
+    addComment(postId, comment): Observable<any> {
+      return this.http.post(`${BASEURL}/post/add-comment`, {
+        postId,
+        comment
+      });
+    }
 
- getPost(id): Observable<any> {
-  return this.http.get(`${BASEURL}/post/${id}`);
-}
+    getPost(id): Observable<any> {
+      return this.http.get(`${BASEURL}/post/${id}`);
+    }
+    EditPost(body): Observable<any> {
+      return this.http.put(`${BASEURL}/post/edit-post`, body)
+    }
 }
