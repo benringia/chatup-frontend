@@ -3,10 +3,7 @@
     font-weight: bold;
     font-size: 18px;
 }
-.tabs {
-    background-color: transparent !important;
-}
 
 .tabs .active {
-    background: inherit !important;
+    background: transparent !important;
 }

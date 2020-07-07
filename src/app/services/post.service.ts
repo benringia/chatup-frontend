@@ -36,7 +36,6 @@ export class PostService {
     EditPost(body): Observable<any> {
       return this.http.put(`${BASEURL}/post/edit-post`, body)
     }
-
     DeletePost(id):Observable<any> {
       return this.http.delete(`${BASEURL}/post/delete-post/${id}`);
     }

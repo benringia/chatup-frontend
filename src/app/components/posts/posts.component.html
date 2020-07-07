@@ -37,7 +37,7 @@
           <div class="modal-content">
               <h4>
                   Edit Post
-                  <button class="secondary-content deleteBtn btn" (click)="DeletePost()"><i class="fas fa-trash-alt"></i> </button>
+                  <button class="secondary-content deleteBtn btn" (click)="DeletePost()"><i class="fas fa-trash-alt"></i></button>
               </h4>
               <p *ngIf="postValue">{{postValue.post}}</p>
               <form [formGroup]="editForm" novalidate>
@@ -50,6 +50,7 @@
           </div>
       </div>
   </div>
+
 
 
  

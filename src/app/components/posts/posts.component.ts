@@ -64,22 +64,21 @@ export class PostsComponent implements OnInit {
     const body = {
       id: this.postValue._id,
       post: this.editForm.value.editedPost
-    }
-    this.postService.EditPost(body).subscribe(data => {
-      console.log(data)
-      this.socket.emit('refresh', {});
-    }, err => console.log(err)
-  );
-  M.Modal.getInstance(this.modalElement).close();
-  this.editForm.reset();
+    };
+    this.postService.EditPost(body).subscribe(
+      data => {
+        this.socket.emit('refresh', {});
+      },
+      err => console.log(err)
+    );
+    M.Modal.getInstance(this.modalElement).close();
+    this.editForm.reset();
   }
-
-
   CloseModal() {
     M.Modal.getInstance(this.modalElement).close();
     this.editForm.reset();
   }
-
+  
   DeletePost() {
     this.postService.DeletePost(this.postValue._id).subscribe(
       data => {
