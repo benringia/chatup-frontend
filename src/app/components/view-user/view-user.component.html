@@ -41,9 +41,7 @@
               <li class="collection-item avatar">
                 <img class="circle" src="https://res.cloudinary.com/dpcl2xifo/image/upload/v{{user.picVersion}}/{{user.picId}}">
                 <span class="post">{{post.postId.username}}</span>
-                <!-- <span data-target="modal" class="title secondary-content modal-trigger" (click)="OpenEditModal(post)">
-                  Edit
-                </span> -->
+                <span data-target="modal" class="title secondary-content modal-trigger" (click)="OpenEditModal(post)"><i class="fas fa-edit"></i></span>
                 <p class="time">{{TimeFromNow(post.postId.created)}}
                   <br> @{{user.city}}, {{user.country}}
                 </p>
@@ -107,24 +105,21 @@
   </div>
 </div>
 
-<!-- <div class="container">
+<div class="container">
   <div id="modal" class="modal">
-    <div class="modal-content">
-      <h4>
-        Edit Post
-        <button class="secondary-content deleteBtn btn" (click)="DeletePost()">
-          Delete
-        </button>
-      </h4>
-      <p *ngIf="postValue">{{postValue.post}}</p>
-      <form [formGroup]="editForm" novalidate>
-        <textarea formControlName="editedPost" class="materialize-textarea"></textarea>
-        <div class="modal-footer">
-          <button class="button" (click)="CloseModal()">Close</button>&nbsp;
-          <button class="btn" (click)="SubmitEditedPost()">Save</button>
-        </div>
-      </form>
-    </div>
-
+      <div class="modal-content">
+          <h4>
+              Edit Post
+              <button class="secondary-content deleteBtn btn" (click)="DeletePost()"><i class="fas fa-trash-alt"></i> </button>
+          </h4>
+          <p *ngIf="postValue">{{postValue.post}}</p>
+          <form [formGroup]="editForm" novalidate>
+              <textarea formControlName="editedPost" class="materialize-textarea"></textarea>
+              <div class="modal-footer">
+                <button (click)="CloseModal()" class="button">Cancel </button>&nbsp;
+                <button (click)="SubmitEditedPost()" class="btn">Save </button>
+              </div>
+          </form>
+      </div>
   </div>
-</div> -->
+</div>

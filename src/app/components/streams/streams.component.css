@@ -1,7 +1,10 @@
 .tabs a {
-    color: #473B7B;
+    color: #3584A7;
     font-weight: bold;
     font-size: 18px;
+}
+.tabs {
+    background-color: transparent !important;
 }
 
 .tabs .active {

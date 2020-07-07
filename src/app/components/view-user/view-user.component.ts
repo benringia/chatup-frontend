@@ -34,7 +34,7 @@ export class ViewUserComponent implements OnInit, AfterViewInit {
     private postService: PostService,
     private fb: FormBuilder
   ) {
-    // this.socket = io('http://localhost:3000');
+    this.socket = io('http://localhost:3000');
   }
 
   ngOnInit() {
@@ -43,33 +43,33 @@ export class ViewUserComponent implements OnInit, AfterViewInit {
     M.Tabs.init(tabs, {});
     this.tabElement = document.querySelector('.nav-content');
 
-    // this.modalElement = document.querySelector('.modal');
-    // M.Modal.init(this.modalElement, {});
+    this.modalElement = document.querySelector('.modal');
+    M.Modal.init(this.modalElement, {});
 
     this.route.params.subscribe(params => {
       this.name = params.name;
       this.GetUserData(this.name);
     });
 
-    // this.socket.on('refreshPage', data => {
-    //   this.route.params.subscribe(params => {
-    //     this.name = params.name;
-    //     this.GetUserData(this.name);
-    //   });
-    // });
+    this.socket.on('refreshPage', data => {
+      this.route.params.subscribe(params => {
+        this.name = params.name;
+        this.GetUserData(this.name);
+      });
+    });
 
-    // this.InitEditForm();
+    this.InitEditForm();
   }
 
   ngAfterViewInit() {
     this.tabElement.style.display = 'none';
   }
 
-  // InitEditForm() {
-  //   this.editForm = this.fb.group({
-  //     editedPost: ['', Validators.required]
-  //   });
-  // }
+  InitEditForm() {
+    this.editForm = this.fb.group({
+      editedPost: ['', Validators.required]
+    });
+  }
 
   GetUserData(name) {
     this.usersService.GetUserByName(name).subscribe(
@@ -83,39 +83,39 @@ export class ViewUserComponent implements OnInit, AfterViewInit {
     );
   }
 
-  // OpenEditModal(post) {
-  //   this.postValue = post;
-  // }
+  OpenEditModal(post) {
+    this.postValue = post;
+  }
 
-  // SubmitEditedPost() {
-  //   const body = {
-  //     id: this.postValue.postId._id,
-  //     post: this.editForm.value.editedPost
-  //   };
-  //   this.postService.EditPost(body).subscribe(
-  //     data => {
-  //       this.socket.emit('refresh', {});
-  //     },
-  //     err => console.log(err)
-  //   );
-  //   M.Modal.getInstance(this.modalElement).close();
-  //   this.editForm.reset();
-  // }
+  SubmitEditedPost() {
+    const body = {
+      id: this.postValue.postId._id,
+      post: this.editForm.value.editedPost
+    };
+    this.postService.EditPost(body).subscribe(
+      data => {
+        this.socket.emit('refresh', {});
+      },
+      err => console.log(err)
+    );
+    M.Modal.getInstance(this.modalElement).close();
+    this.editForm.reset();
+  }
 
-  // CloseModal() {
-  //   M.Modal.getInstance(this.modalElement).close();
-  //   this.editForm.reset();
-  // }
+  CloseModal() {
+    M.Modal.getInstance(this.modalElement).close();
+    this.editForm.reset();
+  }
 
-  // DeletePost() {
-  //   this.postService.DeletePost(this.postValue.postId._id).subscribe(
-  //     data => {
-  //       this.socket.emit('refresh', {});
-  //     },
-  //     err => console.log(err)
-  //   );
-  //   M.Modal.getInstance(this.modalElement).close();
-  // }
+  DeletePost() {
+    this.postService.DeletePost(this.postValue.postId._id).subscribe(
+      data => {
+        this.socket.emit('refresh', {});
+      },
+      err => console.log(err)
+    );
+    M.Modal.getInstance(this.modalElement).close();
+  }
 
   ChangeTab(value) {
     if (value === 'posts') {

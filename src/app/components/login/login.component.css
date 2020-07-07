@@ -4,16 +4,19 @@
   #loginpbtn {
     float: right;
     margin-right: 10px;
-    background-color: #57a8b5;
+    background-color: #3584A7;
     font-weight: 500;
   }
   #title {
-    background-color: #57a8b5;
+    background-color: #3584A7;
     color: white;
     padding: 8px;
     margin-top: 0px;
     font-weight: 700;
     text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-radius: 5px;
   }
   form {
     padding: 0px;
@@ -27,7 +30,7 @@
   }
   
   .indeterminate {
-    background-color: #57a8b5 !important;
+    background-color: #3584A7 !important;
   }
   
   .input-field {
@@ -50,4 +53,3 @@
     float: left;
     font-size: 15px;
   }
-  

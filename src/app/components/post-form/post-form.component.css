@@ -18,10 +18,12 @@
   .postBtn {
     float: right;
     margin-bottom: 5px;
+    background-color: #3584A7 !important;
   }
   
   .file-field input[type='file'] {
     width: 60% !important;
+    background-color: #3584A7 !important;
   }
   .card-content {
     padding: 10px !important;

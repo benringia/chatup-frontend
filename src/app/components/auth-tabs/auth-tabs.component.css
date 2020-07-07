@@ -1,6 +1,5 @@
 .bodyDiv {
-    height: 100%;
-    background-color: #57a8b5 !important;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     margin: 0;
 }
 
@@ -8,14 +7,31 @@ div.bodyContainer {
     margin-top: 50px !important;
 }
 .tabs a {
-    color: #57a8b5;
+    color: #3584A7;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px !important;
 }
 
 .tabs .active {
     background: inherit !important;
 }
 .auth-content {
-    height: 515px !important;
+    height: 415px !important;
 }
+.card {
+    border-radius: 20px !important;
+    width: 500px !important;
+}
+.card-content {
+    padding: 18px;
+}
+body {
+    background-color: #3584A7 !important;
+}
+.flex {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  h3#title {
+      font-size: 18px !important;
+  }
