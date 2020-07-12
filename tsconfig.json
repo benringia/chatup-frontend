@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "src/app/dist/out-tsc",
+    "outDir": "src/app/dist/out-tscut-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
