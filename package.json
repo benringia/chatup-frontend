@@ -22,7 +22,7 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "express": "^4.17.1",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.13",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.22.2",
     "ng2-emoji-picker": "^1.4.8",
