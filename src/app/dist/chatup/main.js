@@ -3106,7 +3106,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-var BASEURL = 'https://chatup1.herokuapp.com/chatup';
+var BASEURL = 'https://chatup1.herokuapp.com';
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
